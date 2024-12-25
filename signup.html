@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: url('image1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+        .signup-container {
+            width: 90%;
+            max-width: 800px;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            text-align: center;
+            height: 600px;
+        }
+        .signup-container h2 {
+            color: #FF9500;
+            margin-bottom: 50px;
+            font-size: 40px;
+        }
+        .form-group {
+            margin-bottom: 40px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+        }
+        .form-group input[type="text"], .form-group input[type="tel"] {
+            background-color: #fff;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #FF9500;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #e07c00;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="company" name="company" placeholder="Company Name" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="volume" name="volume" placeholder="Monthly Estimated Volume" required>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = {
+                name: document.getElementById('name').value,
+                company: document.getElementById('company').value,
+                phone: document.getElementById('phone').value,
+                volume: document.getElementById('volume').value
+            };
+            saveToGoogleSheets(formData);
+        });
+
+            // Your Google Sheets API code here to send `data` to Google Sheets
+        function saveToGoogleSheets(data) {
+    // Replace 'YOUR_SHEET_ID' with the ID of your Google Sheet
+    const SHEET_ID = 'YOUR_SHEET_ID';
+    const SHEET_NAME = 'Sheet1';
+
+    fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_NAME}:append?valueInputOption=RAW`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer YOUR_ACCESS_TOKEN`
+        },
+        body: JSON.stringify({
+            "values": [[data.name, data.company, data.phone, data.volume]]
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert('Data submitted successfully!');
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to submit data.');
+    });
+}
+
+    </script>
+</body>
+</html>

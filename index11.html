@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franchise Opportunities</title>
+    <link rel="stylesheet" href="style11.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="hamburger" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div id="nav-sidebar" class="nav-sidebar">
+        <div class="back-button" id="back-button" style="display: none;" onclick="returnToMainMenu()">&#8592; Back</div>
+
+        <ul class="nav-menu" id="primary-menu">
+            <!-- Services Menu -->
+            <li class="nav-item">
+                <a href="#" onclick="showSubMenu('services-list')">Services <span class="arrow-icon">&#x25B6;</span></a>
+            </li>
+
+            <!-- Solutions Menu -->
+            <li class="nav-item">
+                <a href="#" onclick="showSubMenu('solutions-list')">Solutions <span class="arrow-icon">&#x25B6;</span></a>
+            </li>
+
+            <!-- Partner Menu -->
+            <li class="nav-item">
+                <a href="#" onclick="showSubMenu('partner-list')">Partner <span class="arrow-icon">&#x25B6;</span></a>
+            </li>
+
+            <!-- Company Menu -->
+            <li class="nav-item">
+                <a href="#" onclick="showSubMenu('company-list')">Company <span class="arrow-icon">&#x25B6;</span></a>
+            </li>
+
+            <li class="nav-item"><a href="index19.html">Track</a></li>
+            <li class="nav-item"><a href="index20.html">Support</a></li>
+
+            <!-- Ship Now Menu -->
+            <li class="nav-item">
+                <a href="#" class="ship-button" onclick="showSubMenu('ship-list')">Ship Now &nbsp;<span class="arrow-icon">&#x25B6;</span></a>
+            </li>
+        </ul>
+
+        <!-- Sub-menu for Services -->
+        <ul class="nav-menu sub-list" id="services-list" style="display: none;">
+            <li><a href="index1.html"><img src="https://img.icons8.com/?size=100&id=100617&format=png&color=ff9100" class="menu-img"> Express Parcel</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=U5JRqX4RSgfj&format=png&color=ff9100" class="menu-img"> Warehousing</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=90959&format=png&color=ff9100" class="menu-img"> Part Truckload</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=91020&format=png&color=ff9100" class="menu-img"> Full Truckload</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=120968&format=png&color=ff9100" class="menu-img"> Cross Border</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=101245&format=png&color=ff9100" class="menu-img"> Data Intelligence</a></li>
+        </ul>
+
+        <!-- Sub-menu for Solutions -->
+        <ul class="nav-menu sub-list" id="solutions-list" style="display: none;">
+            <li><a href="index7.html"><img src="https://img.icons8.com/?size=100&id=BqqNAAhxQuPC&format=png&color=ff9100" class="menu-img"> D2C Brands</a></li>
+            <li><a href="index8.html"><img src="https://img.icons8.com/?size=100&id=84072&format=png&color=ff9100" class="menu-img"> Personal Courier</a></li>
+            <li><a href="index9.html"><img src="https://img.icons8.com/?size=100&id=84003&format=png&color=ff9100" class="menu-img"> B2B Enterprises</a></li>
+            <li><a href="index10.html"><img src="https://img.icons8.com/?size=100&id=100805&format=png&color=ff9100" class="menu-img"> RTO Predictor</a></li>
+        </ul>
+
+        <!-- Sub-menu for Partner -->
+        <ul class="nav-menu sub-list" id="partner-list" style="display: none;">
+            <li><a href="index11.html"><img src="https://img.icons8.com/?size=100&id=8745&format=png&color=ff9100" class="menu-img"> Franchise Opportunities</a></li>
+            <li><a href="index12.html"><img src="https://img.icons8.com/?size=100&id=85115&format=png&color=ff9100" class="menu-img"> Delivery Partner</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=bW7vag883QQZ&format=png&color=ff9100" class="menu-img"> Fleet Owners</a></li>
+        </ul>
+
+        <!-- Sub-menu for Company -->
+        <ul class="nav-menu sub-list" id="company-list" style="display: none;">
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=83180&format=png&color=ff9100" class="menu-img"> About Us</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=101234&format=png&color=ff9100" class="menu-img"> Governance</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=91511&format=png&color=ff9100" class="menu-img"> Investor Relations</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=82755&format=png&color=ff9100" class="menu-img"> Press Relations</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=PhBcxv06P9yz&format=png&color=ff9100" class="menu-img"> Careers</a></li>
+        </ul>
+
+        <!-- Sub-menu for Ship Now -->
+        <ul class="nav-menu sub-list" id="ship-list">
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=83142&format=png&color=ff9100" class="menu-img"> Personal Courier</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=120940&format=png&color=ff9100" class="menu-img"> Business Shipments</a></li>
+        </ul>
+    </div>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="RJ Logistics Logo" class="logo-img"></a>
+            </div>
+
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="#">Services</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="index1.html">
+                            <img src="https://img.icons8.com/?size=100&id=100617&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Express Parcel
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=U5JRqX4RSgfj&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Warehousing
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=90959&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Part Truckload
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=91020&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Full Truckload
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=120968&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Cross Border
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=101245&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Data Intelligence
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Solutions</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="index7.html">
+                            <img src="https://img.icons8.com/?size=100&id=BqqNAAhxQuPC&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            D2C Brands
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index8.html">
+                            <img src="https://img.icons8.com/?size=100&id=84072&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Personal Courier
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index9.html">
+                            <img src="https://img.icons8.com/?size=100&id=84003&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            B2B Enterprises
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index10.html">
+                            <img src="https://img.icons8.com/?size=100&id=100805&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            RTO Predictor
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Partner</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="index11.html">
+                            <img src="https://img.icons8.com/?size=100&id=8745&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Franchise Opportunities
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index12.html">
+                            <img src="https://img.icons8.com/?size=100&id=85115&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Delivery Partner
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=bW7vag883QQZ&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Fleet Owners
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Company</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=83180&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=101234&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Governance
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=91511&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Investor Relations
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=82755&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Press Relations
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=PhBcxv06P9yz&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Careers
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="index19.html">Track</a></li>
+                <li class="nav-item"><a href="index20.html">Support</a></li>
+            </ul>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Ship Now &#x25BC;</button>
+                <div class="dropdown-content">
+                    <a href="#">
+                        <img src="https://img.icons8.com/?size=100&id=83142&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                        Personal Courier
+                    </a>
+                    <a href="#">
+                        <img src="https://img.icons8.com/?size=100&id=120940&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                        Business Shipments
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="franchisee-section">
+        <div class="content">
+            <div class="icon"></div>
+            <h1>Associate with <span class="highlight">India's fastest</span><br>growing franchisee business<br>partnership program</h1>
+            <p>- - - - - - - - - - - - - - - - - - - - -  </p>
+            <p>Become part of the Rajveer network and grow your business with us</p>
+        </div>
+    </section>
+
+    <section class="franchisee-type-section">
+        <h2>Choose your <strong>Franchise Type</strong></h2>
+        <div class="underline"></div>
+    </section>
+
+    <div class="container">
+        <div class="card">
+            <h2>Run a Rajveer courier booking counter</h2>
+            <p>Collect parcels from customers at your Rajveer store and provide a convenient courier experience</p>
+            <img src="image2.jpg" alt="Courier Booking Counter">
+            <div class="benefits-eligibility">
+                <div class="benefits">
+                    <h3>Benefits</h3>
+                    <ul>
+                        <li>Affordable setup cost</li>
+                        <li>Make profit on every parcel booked</li>
+                        <li>Additional income on packaging & insurance services</li>
+                    </ul>
+                </div>
+                <div class="eligibility">
+                    <h3>Eligibility</h3>
+                    <ul>
+                        <li>60-80 sqft space on a main road</li>
+                        <li>Good communication skills</li>
+                    </ul>
+                </div>
+            </div>
+            <button><a href="signup.html" class="textface">Sign up to set up a courier booking counter</a></button>
+        </div>
+
+        <div class="or-circle">OR</div>
+
+        <div class="card">
+            <h2>Run parcel delivery center for Rajveer</h2>
+            <p>Sort and deliver parcels to customers doorstep with your staff, from your location, on select routes</p>
+            <img src="image1.jpg" alt="Parcel Delivery Center">
+            <div class="benefits-eligibility">
+                <div class="benefits">
+                    <h3>Benefits</h3>
+                    <ul>
+                        <li>Low setup cost</li>
+                        <li>High volume business</li>
+                        <li>Earn per delivery</li>
+                    </ul>
+                </div>
+                <div class="eligibility">
+                    <h3>Eligibility</h3>
+                    <ul>
+                        <li>Minimum 200 sqft. of floor space to keep shipments</li>
+                        <li>Delivery rider staff for doorstep delivery</li>
+                    </ul>
+                </div>
+            </div>
+            <button><a href="signup.html" class="textface">Sign up to deliver parcels for Rajveer</a></button>
+        </div>
+    </div>
+
+    <div class="faq-section">
+        <div class="faq-icon"><br></div>
+        <h2 class="faq-title"><br><br><br>Frequently asked <span>questions</span></h2>
+    </div>
+    
+    <div class="faq-container">
+    
+        <!-- Left Section: Parcel Exchange Center -->
+        <div class="faq-column">
+          <h2>Parcel Exchange Center</h2>
+    
+          <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">
+              <span class="vertical-line"></span> What is Local Delivery Franchise?
+            </div>
+            <div class="answer">
+              <!-- Answer placeholder -->
+               <p>The program is an extension of the Rajveer pick-up and delivery network. We seek entrepreneurs willing to run their own parcel and freight pick-up and delivery business.</p>
+            </div>
+          </div>
+    
+          <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">
+              <span class="vertical-line"></span> Who can become a Local Delivery Franchise partner?
+            </div>
+            <div class="answer">
+              <!-- Answer placeholder -->
+               <p>Anyone with the ability to set up basic necessary infrastructure and staffing to manage pick-up and delivery operations and with an understanding of their local geography is eligible to become a partner.</p>
+            </div>
+          </div>
+    
+          <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">
+              <span class="vertical-line"></span> How long does the application process take?
+            </div>
+            <div class="answer">
+              <!-- Answer placeholder -->
+               <p>Between 12 to 15 days. After a thorough evaluation process, Rajveer picks a Partner who is appointed exclusively to the location of the partner's choice.</p>
+            </div>
+          </div>
+    
+          <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">
+              <span class="vertical-line"></span> Does it cost anything to become a partner for Rajveer?
+            </div>
+            <div class="answer">
+              <!-- Answer placeholder -->
+               <p>Yes. If you choose to join the programme, you'll need to provide a security deposit amount ranging from ₹ 2-5 lakhs (refundable without interest) or a bank guarantee. If you're a professional in the delivery business, it’s likely that you already have the necessary infrastructure in place. If not, setting up the necessary requirements might incur initial start-up costs.</p>
+            </div>
+          </div>
+    
+          <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">
+              <span class="vertical-line"></span> Will training be provided?
+            </div>
+            <div class="answer">
+              <!-- Answer placeholder -->
+               <p>Yes, Rajveer will provide virtual and physical training. You'll also have access to online training content for future reference.</p>
+            </div>
+          </div>
+    
+          <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">
+              <span class="vertical-line"></span> What are the daily operations like?
+            </div>
+            <div class="answer">
+              <!-- Answer placeholder -->
+               <p>Daily operations involve adhering to basic operational processes- receiving bags at centers, sorting of parcels, dispatching them to customers for successful deliveries along with reverse pick-ups from customers. Additionally, daily compliance on cash deposition and audits are mandatory. All status updates will be monitored using our technology platform.</p>
+            </div>
+          </div>
+    
+          <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">
+              <span class="vertical-line"></span> Is this an exclusive program? Can I sub-franchise it?
+            </div>
+            <div class="answer">
+              <!-- Answer placeholder -->
+               <p>Daily operations involve adhering to basic operational processes- receiving bags at centers, sorting of parcels, dispatching them to customers for successful deliveries along with reverse pick-ups from customers. Additionally, daily compliance on cash deposition and audits are mandatory. All status updates will be monitored using our technology platform.</p>
+            </div>
+          </div>
+    
+          <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">
+              <span class="vertical-line"></span> How does a partner get paid?
+            </div>
+            <div class="answer">
+              <!-- Answer placeholder -->
+               <p>Payments are done on a per-parcel basis, every fortnight. The Rajveer team raises invoices, and upon acceptance by the partner, payments are processed further.</p>
+            </div>
+          </div>
+    
+          <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">
+              <span class="vertical-line"></span> How many areas/city/state can a partner cover?
+            </div>
+            <div class="answer">
+              <!-- Answer placeholder -->
+               <p>This varies by the partner. Reliable, long-term partners are encouraged to expand serviceability and take on larger areas.</p>
+            </div>
+          </div>
+    
+          <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">
+              <span class="vertical-line"></span> What is the tenure of the agreement?
+            </div>
+            <div class="answer">
+              <!-- Answer placeholder -->
+               <p>This will be a permanent agreement, which is revised and renewed annually. Rajveer retains the right to terminate a contract with a partner subject to the partner not meeting required performance and compliance standards.</p>
+            </div>
+          </div>
+    
+        </div>
+        
+        <!-- Right Section: Rajveer Courier Store -->
+        <div class="faq-column">
+          <h2>Rajveer Courier Store</h2>
+    
+          <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">
+              <span class="vertical-line"></span> Local Delivery Franchise vs Courier & Sales Franchise
+            </div>
+            <div class="answer">
+              <!-- Answer placeholder -->
+               <p>In the Local Delivery Franchise program, a partner sets up a last mile delivery center and delivers all the shipments to customers in his/her location. Rajveer drops the parcels at the partner's last mile center. Partner gets paid for the delivery services. 
+                In the Courier & Sales Franchise program, a partner sets up a company branded retail counter and books the parcels and documents of walkin customers and businesses. Rajveer picks up shipments from partners' retail counters and delivers them. Partner gets commission on all shipping charges and other value added services.</p>
+            </div>
+          </div>
+    
+          <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">
+              <span class="vertical-line"></span> What infrastructure is needed to set up a Rajveer courier store?
+            </div>
+            <div class="answer">
+              <!-- Answer placeholder -->
+               <p>A storefront on the main road of a premium location with good visibility and a lot of business activity. The storefront has to be at least 80 sqft (8ftx10ft) and can go up to 200 sqft. The interiors and branding have to be done as per company guidelines and the work will be done by one of the company's authorized partners. </p>
+            </div>
+          </div>
+    
+          <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">
+              <span class="vertical-line"></span> Is there an investment involved?
+            </div>
+            <div class="answer">
+              <!-- Answer placeholder -->
+               <p>Yes. The storefront setup will cost anywhere from Rs. 1.5L to 3L depending on the city and outlet floor area. There will be a 100% refundable security deposit of Rs. 3L to 10L depending on the location and city of the outlet. There will also be a one time non-refundable registration fee of Rs. 50,000 that covers the account setup, training to the franchise and startup kit to start the business. 
+            </p>
+            </div>
+          </div>
+    
+          <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">
+              <span class="vertical-line"></span> How can I earn by joining Rajveer courier franchise program?
+            </div>
+            <div class="answer">
+              <!-- Answer placeholder -->
+               <p>Franchise partners earn commission on all the retail counter bookings and also make profits by providing domestic and international shipping solutions to businesses around them.</p>
+            </div>
+          </div>
+    
+          <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">
+              <span class="vertical-line"></span> What happens if a customer's parcel is lost?
+            </div>
+            <div class="answer">
+              <!-- Answer placeholder -->
+               <p>Rajveer will compensate the customer for any loss or damage to the extent covered by the liability clause. The same is subject to our terms and conditions. The cover increases if the customer opted for insurance while booking the parcel or document.</p>
+            </div>
+          </div>
+    
+          <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">
+              <span class="vertical-line"></span> How do I book the shipments?
+            </div>
+            <div class="answer">
+              <!-- Answer placeholder -->
+               <p>Our partner support team will provide a detailed training session on all our products and booking panel as part of our onboarding process. We also publish frequent training material for the same.</p>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+
+      <div class="franchisee-section1">
+        <h2>Join the Franchisee program and experience the benefit of a wider reach, growth opportunities, and more</h2>
+        <button class="join-button"><a href="signup.html" class="textface">Join us now ➔</a></button>
+    </div>
+    
+    <section class="section">
+        <h2>Other ways you can <strong>Join Rajveer</strong></h2>
+        <div class="underline"></div>
+        <div class="options">
+            <div class="option">
+                <img src="image1.jpg" alt="Delivery Partner">
+                <h3>Delivery Partner</h3>
+                <p>Send shipments across India for parcels across categories including heavy goods. Get value added services like RTO reduction tools, door-step inspection, and tracking.</p>
+            </div>
+            <div class="option">
+                <img src="image2.jpg" alt="Fleet Owner">
+                <h3>Fleet Owner</h3>
+                <p>We connect shippers with fleet owners, transporters, and suppliers of truckload capacity through our in-house bidding platform.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="logo1.png" alt="Rajveer Logo">
+                    <p></p>
+                    <p></p>
+                </div>
+        
+                <div class="footer-line"></div>
+        
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">Courier Shipping Bill</a></li>
+                            <li><a href="#">Customer Clearance</a></li>
+                            <li><a href="#">Import & Export</a></li>
+                            <li><a href="#">IEC Registration for New Sellers</a></li>
+                            <li><a href="#">FBA Services</a></li>
+                            <li><a href="#">Special Pricing For Bulk Shipments</a></li>
+                            <li><a href="#">Software Platform</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Solutions</h4>
+                        <ul>
+                            <li><a href="#">Multiple Shipping Partners</a></li>
+                            <li><a href="#">Track Shipments</a></li>
+                            <li><a href="#">Book & Dispatch</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Partners</h4>
+                        <ul>
+                            <li><a href="#">Franchise Opportunities</a></li>
+                            <li><a href="#">Delivery Partner</a></li>
+                            <li><a href="#">Fleet Owner</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Governance</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                            <li><a href="#">ODR Portal</a></li>
+                            <li><a href="#">Press Release</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Get in Touch</h4>
+                        <ul>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Raise a query</a></li>
+                            <li><a href="#">Store Locator</a></li>
+                            <li><a href="#">Rate Calculator</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Policies</h4>
+                        <ul>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">Fraud Disclaimer</a></li>
+                            <li><a href="#">ONDC Disclaimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div class="footer-line"></div>
+                <div class="disclaimer">
+                    <h4>Information Security Policy</h4>
+                    <p>Rajveer Logistics is committed to safeguarding the confidentiality, integrity, and availability of all physical and electronic information assets of the organization.</p>
+                    <p>We ensure that the regulatory, operational, and contractual requirements are fulfilled.</p>
+                </div>
+    
+                <div class="footer-policy-disclaimer">
+                    
+                    <div class="policy">
+                        <h4>Disclaimer</h4>
+                        <p>Operational metrics listed are as of 14 June, 2024</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><img src="https://img.icons8.com/?size=100&id=118467&format=png&color=ff7300" alt="Facebook"></a>
+                        <a href="#"><img src="https://img.icons8.com/?size=100&id=8824&format=png&color=ff7300" alt="X"></a>
+                        <a href="#"><img src="https://img.icons8.com/?size=100&id=8808&format=png&color=ff7300" alt="LinkedIn"></a>
+                        <a href="#"><img src="https://img.icons8.com/?size=100&id=37326&format=png&color=ff7300" alt="YouTube"></a>
+                        <a href="#"><img src="https://img.icons8.com/?size=100&id=TRVfmt9zm5vL&format=png&color=ff7300" alt="Instagram"></a>
+                    </div>
+                    
+                </div>
+                
+    
+            </div>
+        </footer>
+        <div class="footer1">
+            <div class="footer-line1"></div>
+            <p>&copy; 2024 Rajveer Logistics. All rights reserved.</p>
+            <p style="display: flex; justify-content: center; align-items: center; gap: 10px; margin: 0; width: 100%; padding: 20px 0; text-align: center; background-color: rgb(29, 29, 29); color: white; font-size: 11px; letter-spacing: 1px;">
+                <a href="https://www.linkedin.com/in/khushi-kundwani" 
+                   target="_blank" 
+                   style="color: white; text-decoration: none; position: relative; font-size: 13px; overflow: hidden;" 
+                   onmouseover="this.children[0].style.height='calc(100% + 8px)';" 
+                   onmouseout="this.children[0].style.height='0';">
+                  &copy; Khushi Kundwani
+                  <span style="content: ''; background: white; mix-blend-mode: exclusion; width: calc(100% + 18px); height: 0; position: absolute; bottom: -4px; left: -10px; transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);"></span>
+                </a>
+                <a href="https://www.linkedin.com/in/mitanshi-jain555" 
+                   target="_blank" 
+                   style="color: white; text-decoration: none; position: relative; font-size: 13px; overflow: hidden;" 
+                   onmouseover="this.children[0].style.height='calc(100% + 8px)';" 
+                   onmouseout="this.children[0].style.height='0';">
+                  &copy; Mitanshi Jain
+                  <span style="content: ''; background: white; mix-blend-mode: exclusion; width: calc(100% + 18px); height: 0; position: absolute; bottom: -4px; left: -10px; transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);"></span>
+                </a>
+                <a href="https://www.linkedin.com/in/mohammad-shaban-aiotechbot" 
+                   target="_blank" 
+                   style="color: white; text-decoration: none; position: relative; font-size: 13px; overflow: hidden;" 
+                   onmouseover="this.children[0].style.height='calc(100% + 8px)';" 
+                   onmouseout="this.children[0].style.height='0';">
+                  &copy; Mohammad Shaban
+                  <span style="content: ''; background: white; mix-blend-mode: exclusion; width: calc(100% + 18px); height: 0; position: absolute; bottom: -4px; left: -10px; transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);"></span>
+                </a>
+              </p>
+        </div>
+    <script src="script11.js"></script>
+</body>
+</html>

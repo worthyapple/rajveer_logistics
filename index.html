@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajveer Logistics</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--
+    home page(index.html)
+    expressparcel(index1.html)
+    D2C(index7.html)
+    Personalcourier(index8.html)
+    B2C(index9.html)
+    RTO(index10.html)
+    Franchise(index11.html)
+    DeliveryPartner(index12.html)
+    track(index19.html)
+    support(index20.html)
+    
+-->    
+<!-- The popup window -->
+<div class="popup">
+    <div class="content1">
+        <p style="font-weight: 400;font-size: medium;color: white;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+            We use cookies on our website for analytics and advertising purposes. It helps us improve the functionality and user experience. By accepting this message, you consent to our cookie policy on this device unless you decline it.</p>
+    </div>
+    <div class="buttons">
+        <button class="close-btn" style="padding-bottom: 10px; margin-bottom: 10px;" type="button" aria-label="Accept cookies">Accept</button>
+        <button class="btun" type="button" aria-label="Reject cookies">Reject</button>
+    </div>
+</div>
+<header>
+    <div class="hamburger" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div id="nav-sidebar" class="nav-sidebar">
+        <div class="back-button" id="back-button" style="display: none;" onclick="returnToMainMenu()">&#8592; Back</div>
+
+        <ul class="nav-menu" id="primary-menu">
+            <!-- Services Menu -->
+            <li class="nav-item">
+                <a href="#" onclick="showSubMenu('services-list')">Services <span class="arrow-icon">&#x25B6;</span></a>
+            </li>
+
+            <!-- Solutions Menu -->
+            <li class="nav-item">
+                <a href="#" onclick="showSubMenu('solutions-list')">Solutions <span class="arrow-icon">&#x25B6;</span></a>
+            </li>
+
+            <!-- Partner Menu -->
+            <li class="nav-item">
+                <a href="#" onclick="showSubMenu('partner-list')">Partner <span class="arrow-icon">&#x25B6;</span></a>
+            </li>
+
+            <!-- Company Menu -->
+            <li class="nav-item">
+                <a href="#" onclick="showSubMenu('company-list')">Company <span class="arrow-icon">&#x25B6;</span></a>
+            </li>
+
+            <li class="nav-item"><a href="index19.html">Track</a></li>
+            <li class="nav-item"><a href="index20.html">Support</a></li>
+
+            <!-- Ship Now Menu -->
+            <li class="nav-item">
+                <a href="#" class="ship-button" onclick="showSubMenu('ship-list')">Ship Now &nbsp;<span class="arrow-icon">&#x25B6;</span></a>
+            </li>
+        </ul>
+
+        <!-- Sub-menu for Services -->
+        <ul class="nav-menu sub-list" id="services-list" style="display: none;">
+            <li><a href="index1.html"><img src="https://img.icons8.com/?size=100&id=100617&format=png&color=ff9100" class="menu-img"> Express Parcel</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=U5JRqX4RSgfj&format=png&color=ff9100" class="menu-img"> Warehousing</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=90959&format=png&color=ff9100" class="menu-img"> Part Truckload</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=91020&format=png&color=ff9100" class="menu-img"> Full Truckload</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=120968&format=png&color=ff9100" class="menu-img"> Cross Border</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=101245&format=png&color=ff9100" class="menu-img"> Data Intelligence</a></li>
+        </ul>
+
+        <!-- Sub-menu for Solutions -->
+        <ul class="nav-menu sub-list" id="solutions-list" style="display: none;">
+            <li><a href="index7.html"><img src="https://img.icons8.com/?size=100&id=BqqNAAhxQuPC&format=png&color=ff9100" class="menu-img"> D2C Brands</a></li>
+            <li><a href="index8.html"><img src="https://img.icons8.com/?size=100&id=84072&format=png&color=ff9100" class="menu-img"> Personal Courier</a></li>
+            <li><a href="index9.html"><img src="https://img.icons8.com/?size=100&id=84003&format=png&color=ff9100" class="menu-img"> B2B Enterprises</a></li>
+            <li><a href="index10.html"><img src="https://img.icons8.com/?size=100&id=100805&format=png&color=ff9100" class="menu-img"> RTO Predictor</a></li>
+        </ul>
+
+        <!-- Sub-menu for Partner -->
+        <ul class="nav-menu sub-list" id="partner-list" style="display: none;">
+            <li><a href="index11.html"><img src="https://img.icons8.com/?size=100&id=8745&format=png&color=ff9100" class="menu-img"> Franchise Opportunities</a></li>
+            <li><a href="index12.html"><img src="https://img.icons8.com/?size=100&id=85115&format=png&color=ff9100" class="menu-img"> Delivery Partner</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=bW7vag883QQZ&format=png&color=ff9100" class="menu-img"> Fleet Owners</a></li>
+        </ul>
+
+        <!-- Sub-menu for Company -->
+        <ul class="nav-menu sub-list" id="company-list" style="display: none;">
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=83180&format=png&color=ff9100" class="menu-img"> About Us</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=101234&format=png&color=ff9100" class="menu-img"> Governance</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=91511&format=png&color=ff9100" class="menu-img"> Investor Relations</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=82755&format=png&color=ff9100" class="menu-img"> Press Relations</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=PhBcxv06P9yz&format=png&color=ff9100" class="menu-img"> Careers</a></li>
+        </ul>
+
+        <!-- Sub-menu for Ship Now -->
+        <ul class="nav-menu sub-list" id="ship-list">
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=83142&format=png&color=ff9100" class="menu-img"> Personal Courier</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=120940&format=png&color=ff9100" class="menu-img"> Business Shipments</a></li>
+        </ul>
+    </div>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="RJ Logistics Logo" class="logo-img"></a>
+            </div>
+
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="#">Services</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="index1.html">
+                            <img src="https://img.icons8.com/?size=100&id=100617&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Express Parcel
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=U5JRqX4RSgfj&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Warehousing
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=90959&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Part Truckload
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=91020&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Full Truckload
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=120968&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Cross Border
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=101245&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Data Intelligence
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Solutions</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="index7.html">
+                            <img src="https://img.icons8.com/?size=100&id=BqqNAAhxQuPC&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            D2C Brands
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index8.html">
+                            <img src="https://img.icons8.com/?size=100&id=84072&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Personal Courier
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index9.html">
+                            <img src="https://img.icons8.com/?size=100&id=84003&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            B2B Enterprises
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index10.html">
+                            <img src="https://img.icons8.com/?size=100&id=100805&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            RTO Predictor
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Partner</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="index11.html">
+                            <img src="https://img.icons8.com/?size=100&id=8745&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Franchise Opportunities
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index12.html">
+                            <img src="https://img.icons8.com/?size=100&id=85115&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Delivery Partner
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=bW7vag883QQZ&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Fleet Owners
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Company</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=83180&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=101234&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Governance
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=91511&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Investor Relations
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=82755&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Press Relations
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=PhBcxv06P9yz&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Careers
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="index19.html">Track</a></li>
+                <li class="nav-item"><a href="index20.html">Support</a></li>
+            </ul>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Ship Now &#x25BC;</button>
+                <div class="dropdown-content">
+                    <a href="#">
+                        <img src="https://img.icons8.com/?size=100&id=83142&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                        Personal Courier
+                    </a>
+                    <a href="#">
+                        <img src="https://img.icons8.com/?size=100&id=120940&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                        Business Shipments
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="marquee-container">
+            <marquee class="marquee" onmouseover="this.stop();" onmouseout="this.start();">
+                <b>SERVICE UPDATES:</b> Be aware  of emails or communications from any other website except Rajveer Logistics.com. Do not transfer money to payment links received via email.
+            </marquee>
+        </div>
+        <div class="red-line"></div>
+    </header>
+    <div class="logistics-header">
+        <div class="left-section">
+            <h1>Everything Anywhere At your Doorstep with <br><span>Rajveer Logistics</span></h1>
+        
+        </div>
+    
+        <div class="right-section">
+            <div class="tracking-box">
+                <div class="tabs">
+                    <span class="tab-track active">Track order</span>
+                    <span class="tab-ship">Ship order</span>
+                </div>
+                
+                <div id="track-order-content" class="tab-content active">
+                    <h3>Track your order through</h3>
+                    <div class="tracking-options">
+                        <button class="active">Mobile</button>
+                        <button>AWB</button>
+                        <button>Order Id</button>
+                        <button>LRN</button>
+                    </div>
+                    <input type="text" placeholder="Enter your Data">
+                    <button class="otp-btn">Track</button>
+                </div>
+                
+                <div id="ship-order-content" class="tab-content">
+                    <h3><strong>Ship</strong> personal courier</h3>
+                    <div class="shipping-options">
+                        <button class="active">Domestic</button>
+                        <button>International</button>
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="Enter pickup pin code">
+                        <input type="text" placeholder="Enter delivery pin code">
+                    </div>
+                    <button class="otp-btn1">Get OTP & Ship Now</button>
+                </div>
+                
+                <div class="app-links">
+                    <p>Live tracking updates & extra support on our App</p>
+                    <div class="store-links">
+                        <img src="google.png" alt="Google Play">
+                        <img src="apple.png" alt="App Store">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="stats-section">
+        <h1>Where to Get the fastest ecom delivery Service in India ?</h1>
+        <h2><span>The Answer is </span>Rajveer Logistics</h2>
+        <div class="stats-container">
+            <div class="stat-box">
+                <img src="https://img.icons8.com/ios-filled/50/000000/user.png" alt="parcels shipped">
+                <h3>10 Lakh +</h3>
+                <p>Parcels shipped since inception</p>
+            </div>
+            <div class="stat-box">
+                <img src="https://img.icons8.com/ios-filled/50/000000/building.png" alt="population covered">
+                <h3>99.5%</h3>
+                <p>States population covered</p>
+            </div>
+            <div class="stat-box">
+                <img src="https://img.icons8.com/ios-filled/50/000000/conference-call.png" alt="businesses served">
+                <h3>33K+</h3>
+                <p>Businesses served</p>
+            </div>
+            <div class="stat-box">
+                <img src="https://img.icons8.com/ios-filled/50/000000/delivery.png" alt="tonnes shipped">
+                <h3>4.3 Mn+</h3>
+                <p>Tonnes Freight shipped</p>
+            </div>
+            <div class="stat-box">
+                <img src="https://img.icons8.com/ios-filled/50/000000/warehouse.png" alt="logistics infrastructure">
+                <h3>18.8 Mn+</h3>
+                <p>Square feet logistics infrastructure covered</p>
+            </div>
+        </div>
+    </section>
+        <section class="solutions-section">
+            <h1>Why <span>Choose</span> Us ?</h1>
+            
+            <div class="solutions-container">
+                <div class="solution-box">
+                    <div class="solution-icon">
+                        <img src="https://img.icons8.com/?size=100&id=x5wFAilTVj9z&format=png&color=FD7E14" alt="Multiple Shipping Partners">
+                    </div>
+                    <h2>Multiple Shipping Partners</h2>
+                    <p>It's difficult to meet all your business needs with just one courier partner at hand. With Rajveer Logistics, you can choose multiple courier partners based on your shipping requirements</p>
+                    <a href="#" class="learn-more">Know More &rarr;</a>
+                </div>
+    
+                <div class="solution-box">
+                    <div class="solution-icon">
+                        <img src="https://img.icons8.com/?size=100&id=112535&format=png&color=FD7E14" alt="Track Shipments In Real-Time">
+                    </div>
+                    <h2>Track Shipments</h2>
+                    <p>Receive timely SMS and email alerts to stay informed about the status of your orders.</p>
+                    <a href="#" class="learn-more">Know More &rarr;</a>
+                </div>
+    
+                <div class="solution-box">
+                    <div class="solution-icon">
+                        <img src="https://img.icons8.com/?size=100&id=KtUiBF6lEFel&format=png&color=FD7E14" alt="Book & Dispatch">
+                    </div>
+                    <h2>Book & Dispatch</h2>
+                    <p>Book and print the required labels, and hand it over to the delivery partner and get your parcel given on the specific time</p>
+                    <a href="#" class="learn-more">Know More &rarr;</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="services-section">
+            <div class="container">
+              <!-- Left Section -->
+              <div class="left-section1">
+                <h2>Tools and Services for Seamless Delivery</h2>
+                <span class="underline"></span>
+              </div>
+              
+              <!-- Right Section -->
+              <div class="right-section1">
+                <div class="services-grid">
+                  <!-- First Row of Cards -->
+                  <div class="service-card">
+                    <img src="image1.jpg" alt="Courier Shipping Bill">
+                    <div class="card-content">
+                      <h3>Courier Shipping Bill</h3>
+                      <p>A shipping bill is a legal document used in international trade and shipping to facilitate the movement of goods across international borders.</p>
+                      <a href="#">Know More →</a>
+                    </div>
+                  </div>
+          
+                  <div class="service-card">
+                    <img src="image2.jpg" alt="Customer Clearance">
+                    <div class="card-content">
+                      <h3>Customer Clearance</h3>
+                      <p>Customs clearance services are often provided by customs brokers or freight forwarders to ensure that shipments comply with all applicable laws and regulations.</p>
+                      <a href="#">Know More →</a>
+                    </div>
+                  </div>
+          
+                  <div class="service-card">
+                    <img src="image3.jpg" alt="Import & Export">
+                    <div class="card-content">
+                      <h3>Import & Export</h3>
+                      <p>These services encompass a wide range of activities and documentation to ensure that goods are transported efficiently and comply with legal and regulatory requirements.</p>
+                      <a href="#">Know More →</a>
+                    </div>
+                  </div>
+          
+                  <!-- Second Row of Cards -->
+                  <div class="service-card">
+                    <img src="image4.jpg" alt="IEC Registration for New Sellers">
+                    <div class="card-content">
+                      <h3>IEC Registration for New Sellers</h3>
+                    <p>IEC (Import Export Code) license is one of such prerequisites when you're thinking of importing into or exporting from India.</p>
+                      <a href="#">Know More →</a>
+                    </div>
+                  </div>
+          
+                  <div class="service-card">
+                    <img src="image5.jpg" alt="FBA Services">
+                    <div class="card-content">
+                      <h3>FBA Services</h3>
+                     <p>Fulfillment by Amazon (FBA) is a service offered by Amazon that allows sellers to store their products in Amazon's fulfillment centers.
+                    </p>
+                      <a href="#">Know More →</a>
+                    </div>
+                  </div>
+          
+                  <div class="service-card">
+                    <img src="image6.jpg" alt="Special Pricing For Bulk Shipments">
+                    <div class="card-content">
+                      <h3>Special Pricing For Bulk Shipments</h3>
+                      <p>This service is particularly attractive to businesses and e-commerce sellers who regularly send out significant volumes of products.</p>
+                      <a href="#">Know More →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+
+        <div class="message">
+            <p class="headline">
+                Rajveer Logistics is Built for Your Business
+            </p>
+            <p class="subheadline">
+                Sign up now to start shipping with Our Company
+            </p>
+            <br><br>
+            <div class="buttonss">
+                <button class="shipment-button">
+                    Personal Courier →
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <button class="shipment-button">
+                    Business Shipments →
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="logo1.png" alt="Rajveer Logo">
+                    <p></p>
+                    <p>: </p>
+                </div>
+        
+                <div class="footer-line"></div>
+        
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">Courier Shipping Bill</a></li>
+                            <li><a href="#">Customer Clearance</a></li>
+                            <li><a href="#">Import & Export</a></li>
+                            <li><a href="#">IEC Registration for New Sellers</a></li>
+                            <li><a href="#">FBA Services</a></li>
+                            <li><a href="#">Special Pricing For Bulk Shipments</a></li>
+                            <li><a href="#">Software Platform</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Solutions</h4>
+                        <ul>
+                            <li><a href="#">Multiple Shipping Partners</a></li>
+                            <li><a href="#">Track Shipments</a></li>
+                            <li><a href="#">Book & Dispatch</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Partners</h4>
+                        <ul>
+                            <li><a href="#">Franchise Opportunities</a></li>
+                            <li><a href="#">Delivery Partner</a></li>
+                            <li><a href="#">Fleet Owner</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Governance</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                            <li><a href="#">ODR Portal</a></li>
+                            <li><a href="#">Press Release</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Get in Touch</h4>
+                        <ul>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Raise a query</a></li>
+                            <li><a href="#">Store Locator</a></li>
+                            <li><a href="#">Rate Calculator</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Policies</h4>
+                        <ul>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">Fraud Disclaimer</a></li>
+                            <li><a href="#">ONDC Disclaimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div class="footer-line"></div>
+                <div class="disclaimer">
+                    <h4>Information Security Policy</h4>
+                    <p>Rajveer Logistics is committed to safeguarding the confidentiality, integrity, and availability of all physical and electronic information assets of the organization.</p>
+                    <p>We ensure that the regulatory, operational, and contractual requirements are fulfilled.</p>
+                </div>
+    
+                <div class="footer-policy-disclaimer">
+                    
+                    <div class="policy">
+                        <h4>Disclaimer</h4>
+                        <p>Operational metrics listed are as of 14 June, 2024</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><img src="https://img.icons8.com/?size=100&id=118467&format=png&color=ff7300" alt="Facebook"></a>
+                        <a href="#"><img src="https://img.icons8.com/?size=100&id=8824&format=png&color=ff7300" alt="X"></a>
+                        <a href="#"><img src="https://img.icons8.com/?size=100&id=8808&format=png&color=ff7300" alt="LinkedIn"></a>
+                        <a href="#"><img src="https://img.icons8.com/?size=100&id=37326&format=png&color=ff7300" alt="YouTube"></a>
+                        <a href="#"><img src="https://img.icons8.com/?size=100&id=TRVfmt9zm5vL&format=png&color=ff7300" alt="Instagram"></a>
+                    </div>
+                    
+                </div>
+                
+    
+            </div>
+        </footer>
+        <div class="footer1">
+            <div class="footer-line1"></div>
+            <p>&copy; 2024 Rajveer Logistics. All rights reserved.</p>
+            <p style="display: flex; justify-content: center; align-items: center; gap: 10px; margin: 0; width: 100%; padding: 20px 0; text-align: center; background-color: rgb(29, 29, 29); color: white; font-size: 11px; letter-spacing: 1px;">
+                <a href="https://www.linkedin.com/in/khushi-kundwani" 
+                   target="_blank" 
+                   style="color: white; text-decoration: none; position: relative; font-size: 13px; overflow: hidden;" 
+                   onmouseover="this.children[0].style.height='calc(100% + 8px)';" 
+                   onmouseout="this.children[0].style.height='0';">
+                  &copy; Khushi Kundwani
+                  <span style="content: ''; background: white; mix-blend-mode: exclusion; width: calc(100% + 18px); height: 0; position: absolute; bottom: -4px; left: -10px; transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);"></span>
+                </a>
+                <a href="https://www.linkedin.com/in/mitanshi-jain555" 
+                   target="_blank" 
+                   style="color: white; text-decoration: none; position: relative; font-size: 13px; overflow: hidden;" 
+                   onmouseover="this.children[0].style.height='calc(100% + 8px)';" 
+                   onmouseout="this.children[0].style.height='0';">
+                  &copy; Mitanshi Jain
+                  <span style="content: ''; background: white; mix-blend-mode: exclusion; width: calc(100% + 18px); height: 0; position: absolute; bottom: -4px; left: -10px; transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);"></span>
+                </a>
+                <a href="https://www.linkedin.com/in/mohammad-shaban-aiotechbot" 
+                   target="_blank" 
+                   style="color: white; text-decoration: none; position: relative; font-size: 13px; overflow: hidden;" 
+                   onmouseover="this.children[0].style.height='calc(100% + 8px)';" 
+                   onmouseout="this.children[0].style.height='0';">
+                  &copy; Mohammad Shaban
+                  <span style="content: ''; background: white; mix-blend-mode: exclusion; width: calc(100% + 18px); height: 0; position: absolute; bottom: -4px; left: -10px; transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);"></span>
+                </a>
+              </p>
+              
+              
+            
+              
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>

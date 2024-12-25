@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <link rel="stylesheet" href="style20.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="hamburger" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div id="nav-sidebar" class="nav-sidebar">
+        <div class="back-button" id="back-button" style="display: none;" onclick="returnToMainMenu()">&#8592; Back</div>
+
+        <ul class="nav-menu" id="primary-menu">
+            <!-- Services Menu -->
+            <li class="nav-item">
+                <a href="#" onclick="showSubMenu('services-list')">Services <span class="arrow-icon">&#x25B6;</span></a>
+            </li>
+
+            <!-- Solutions Menu -->
+            <li class="nav-item">
+                <a href="#" onclick="showSubMenu('solutions-list')">Solutions <span class="arrow-icon">&#x25B6;</span></a>
+            </li>
+
+            <!-- Partner Menu -->
+            <li class="nav-item">
+                <a href="#" onclick="showSubMenu('partner-list')">Partner <span class="arrow-icon">&#x25B6;</span></a>
+            </li>
+
+            <!-- Company Menu -->
+            <li class="nav-item">
+                <a href="#" onclick="showSubMenu('company-list')">Company <span class="arrow-icon">&#x25B6;</span></a>
+            </li>
+
+            <li class="nav-item"><a href="index19.html">Track</a></li>
+            <li class="nav-item"><a href="index20.html">Support</a></li>
+
+            <!-- Ship Now Menu -->
+            <li class="nav-item">
+                <a href="#" class="ship-button" onclick="showSubMenu('ship-list')">Ship Now &nbsp;<span class="arrow-icon">&#x25B6;</span></a>
+            </li>
+        </ul>
+
+        <!-- Sub-menu for Services -->
+        <ul class="nav-menu sub-list" id="services-list" style="display: none;">
+            <li><a href="index1.html"><img src="https://img.icons8.com/?size=100&id=100617&format=png&color=ff9100" class="menu-img"> Express Parcel</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=U5JRqX4RSgfj&format=png&color=ff9100" class="menu-img"> Warehousing</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=90959&format=png&color=ff9100" class="menu-img"> Part Truckload</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=91020&format=png&color=ff9100" class="menu-img"> Full Truckload</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=120968&format=png&color=ff9100" class="menu-img"> Cross Border</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=101245&format=png&color=ff9100" class="menu-img"> Data Intelligence</a></li>
+        </ul>
+
+        <!-- Sub-menu for Solutions -->
+        <ul class="nav-menu sub-list" id="solutions-list" style="display: none;">
+            <li><a href="index7.html"><img src="https://img.icons8.com/?size=100&id=BqqNAAhxQuPC&format=png&color=ff9100" class="menu-img"> D2C Brands</a></li>
+            <li><a href="index8.html"><img src="https://img.icons8.com/?size=100&id=84072&format=png&color=ff9100" class="menu-img"> Personal Courier</a></li>
+            <li><a href="index9.html"><img src="https://img.icons8.com/?size=100&id=84003&format=png&color=ff9100" class="menu-img"> B2B Enterprises</a></li>
+            <li><a href="index10.html"><img src="https://img.icons8.com/?size=100&id=100805&format=png&color=ff9100" class="menu-img"> RTO Predictor</a></li>
+        </ul>
+
+        <!-- Sub-menu for Partner -->
+        <ul class="nav-menu sub-list" id="partner-list" style="display: none;">
+            <li><a href="index11.html"><img src="https://img.icons8.com/?size=100&id=8745&format=png&color=ff9100" class="menu-img"> Franchise Opportunities</a></li>
+            <li><a href="index12.html"><img src="https://img.icons8.com/?size=100&id=85115&format=png&color=ff9100" class="menu-img"> Delivery Partner</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=bW7vag883QQZ&format=png&color=ff9100" class="menu-img"> Fleet Owners</a></li>
+        </ul>
+
+        <!-- Sub-menu for Company -->
+        <ul class="nav-menu sub-list" id="company-list" style="display: none;">
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=83180&format=png&color=ff9100" class="menu-img"> About Us</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=101234&format=png&color=ff9100" class="menu-img"> Governance</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=91511&format=png&color=ff9100" class="menu-img"> Investor Relations</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=82755&format=png&color=ff9100" class="menu-img"> Press Relations</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=PhBcxv06P9yz&format=png&color=ff9100" class="menu-img"> Careers</a></li>
+        </ul>
+
+        <!-- Sub-menu for Ship Now -->
+        <ul class="nav-menu sub-list" id="ship-list">
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=83142&format=png&color=ff9100" class="menu-img"> Personal Courier</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=120940&format=png&color=ff9100" class="menu-img"> Business Shipments</a></li>
+        </ul>
+    </div>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="RJ Logistics Logo" class="logo-img"></a>
+            </div>
+
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="#">Services</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="index1.html">
+                            <img src="https://img.icons8.com/?size=100&id=100617&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Express Parcel
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=U5JRqX4RSgfj&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Warehousing
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=90959&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Part Truckload
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=91020&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Full Truckload
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=120968&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Cross Border
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=101245&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Data Intelligence
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Solutions</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="index7.html">
+                            <img src="https://img.icons8.com/?size=100&id=BqqNAAhxQuPC&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            D2C Brands
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index8.html">
+                            <img src="https://img.icons8.com/?size=100&id=84072&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Personal Courier
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index9.html">
+                            <img src="https://img.icons8.com/?size=100&id=84003&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            B2B Enterprises
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index10.html">
+                            <img src="https://img.icons8.com/?size=100&id=100805&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            RTO Predictor
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Partner</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="index11.html">
+                            <img src="https://img.icons8.com/?size=100&id=8745&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Franchise Opportunities
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index12.html">
+                            <img src="https://img.icons8.com/?size=100&id=85115&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Delivery Partner
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=bW7vag883QQZ&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Fleet Owners
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Company</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=83180&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=101234&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Governance
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=91511&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Investor Relations
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=82755&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Press Relations
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=PhBcxv06P9yz&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Careers
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="index19.html">Track</a></li>
+                <li class="nav-item"><a href="index20.html">Support</a></li>
+            </ul>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Ship Now &#x25BC;</button>
+                <div class="dropdown-content">
+                    <a href="#">
+                        <img src="https://img.icons8.com/?size=100&id=83142&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                        Personal Courier
+                    </a>
+                    <a href="#">
+                        <img src="https://img.icons8.com/?size=100&id=120940&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                        Business Shipments
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="marquee-container">
+            <marquee class="marquee" onmouseover="this.stop();" onmouseout="this.start();">
+                <b>SERVICE UPDATES:</b> Be aware  of emails or communications from any other website except Rajveer Logistics.com. Do not transfer money to payment links received via email.
+            </marquee>
+        </div>
+        <div class="red-line"></div>
+    </header>
+    
+    <div class="support-section">
+        <div class="support-left">
+            <h1>Hello, Welcome to Rajveer Logistics's Support Center</h1>
+            <p><span class="highlight">How</span> can we help you today?</p>
+        </div>
+        <div class="support-right">
+            <div class="query-box">
+                <p class="support-text"><b>NEED SUPPORT WITH YOUR SHIPMENT?</b></p>
+                <div class="query-content">
+                    <p class="raise-query">Raise a Query</p>
+                    <p>(or) Call us at +91 7778889755</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-header">
+                    <img src="https://img.icons8.com/?size=100&id=sQBc1VIzdv37&format=png&color=ff9100" alt="Logo" class="sidebar-logo">
+                    <h3>Shipments</h3>
+                </div>
+            </div>
+            
+            <ul>
+                <li class="shipment-option active" data-category="shipment-status">
+                    <span class="arrow">&#9654;</span> Shipment Status
+                </li>
+                <li class="shipment-option" data-category="destination-contact">
+                    <span class="arrow">&#9654;</span> Destination and Contact details
+                </li>
+                <li class="shipment-option" data-category="returns">
+                    <span class="arrow">&#9654;</span> Returns
+                </li>
+                <li class="shipment-option" data-category="report-issues">
+                    <span class="arrow">&#9654;</span> Report Issues
+                </li>
+                <li class="shipment-option" data-category="fragile">
+                    <span class="arrow">&#9654;</span> Fragile shipments
+                </li>
+                <li class="shipment-option" data-category="general">
+                    <span class="arrow">&#9654;</span> General
+                </li>
+                <li class="shipment-option" data-category="Partnerships">
+                    <span class="arrow">&#9654;</span> Partnerships
+                </li>
+                <li class="shipment-option" data-category="Careers">
+                    <span class="arrow">&#9654;</span> Carrers
+                </li>
+            </ul>
+        </div>
+    
+        <div class="content">
+            <div class="search-bar">
+                <img src="https://img.icons8.com/?size=100&id=7695&format=png&color=ff9100" alt="Search Icon" class="search-icon">
+                <input type="text" placeholder="Type the topic you need help for">
+            </div>
+    
+            <!-- FAQ Sections for Different Shipment Options -->
+            <div class="faq-section" data-category="shipment-status">
+                <h2>Shipment Status</h2>
+                <div class="faq">
+                    <!-- Sample FAQ Item -->
+                    <div class="faq-item">
+                        <p class="faq-question">How can I track my shipment?</p>
+                        <div class="faq-answer">
+                            <p>To track your shipment, you can <a href="#">download our app</a> or go to the <a href="#">tracking page</a>. Enter your tracking ID and click 'TRACK'.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">Why is my package delayed?</p>
+                        <div class="faq-answer">
+                            <p>our delivery may get delayed due to unforeseen circumstances. A new delivery timeframe will be shared with you when you track your shipment on our website. In case you have additional questions or concerns, please raise a support ticket from <a href="#">here</a> .
+                                You can also contact us via our IVR number +91-7778889755.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">My shipment status is still at 'Pick up.' What should I do?</p>
+                        <div class="faq-answer">
+                            <p>'Pick up pending' status means that Company hasn't received the physical shipment from the sender. Please contact the sender for further assistance.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">What do I do if tracking page doesn't show the expected date of arrival?</p>
+                        <div class="faq-answer">
+                            <p>Company will be able to provide estimated date of arrival only after the shipment has been picked up from the sender. In the meantime, please contact the sender for further assistance.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">My shipment is out for delivery. When will I receive it?</p>
+                        <div class="faq-answer">
+                            <p>Your shipment can be delivered to you anytime between 10:00 am and 8:00 pm on the same day when it is marked as out for delivery.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">How can I get the delivery of my shipment if I missed it today?</p>
+                        <div class="faq-answer">
+                            <p>Do not worry if you missed your order.Company usually attempts to deliver the shipment on the following business day if you have missed a delivery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="faq-section" data-category="destination-contact">
+                <h2>Destination and Contact Details</h2>
+                <div class="faq">
+                    <div class="faq-item">
+                        <p class="faq-question">How do I change my delivery address after an order was placed?</p>
+                        <div class="faq-answer">
+                            <p>As a delivery partner, we cannot change your address at our end. Please contact the seller at your end to change your delivery address. For Direct orders, you can change the delivery address from the order details section of our Mobile app.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">Why I am not getting any tracking details on my phone?</p>
+                        <div class="faq-answer">
+                            <p>You can get real time updates on your shipments by downloading our Mobile app and enabling notifications on it.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">What should I do if I am not available at the time of delivery/pickup?</p>
+                        <div class="faq-answer">
+                            <p>You can reschedule your delivery/pickup from the tracking details section of our Mobile app. However, this facility is not available once the package is out for delivery/pickup. If our executive reaches your doorstep, please refuse to accept / handover the package.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">How can I collect the shipment myself from facility?</p>
+                        <div class="faq-answer">
+                            <p>We prefer delivering your shipment at your doorstep. However, if you wish to collect it yourself, you can place a request from the shipment details page of our Mobile app. You need to carry any Government ID proof (PAN card, driving license, voter ID) to the facility to collect your order. This facility is not available when the package is out for delivery. If our executive reaches your doorstep, please refuse to accept / handover the package.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">What documents should I carry to self-collect my shipment?</p>
+                        <div class="faq-answer">
+                            <p>You need to carry any Government ID proof (PAN card, driving license, voter ID).</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">Can I open my package before accepting it?</p>
+                        <div class="faq-answer">
+                            <p>We understand that you wish to ensure that the shipment is as per your expectation before accepting it. However, currently, we do not provide an open delivery service. In case of any product related issue, please contact the sender.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Add additional categories similarly -->
+            <div class="faq-section" data-category="returns">
+                <h2>Returns</h2>
+                <div class="faq">
+                    <!-- Sample FAQ Item -->
+                    <div class="faq-item">
+                        <p class="faq-question">What do I do if there is a delay in the pick up of my return shipment?</p>
+                        <div class="faq-answer">
+                            <p>Due to unforeseen circumstances, your pick up can get delayed. Please raise a support ticket from the tracking page here.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">How do I cancel my delivery/pickup?</p>
+                        <div class="faq-answer">
+                            <p>You can cancel your delivery/pickup from the shipment details section 
+                                of our Mobile app. However, this facility is not available once the package 
+                                is out for delivery/pickup. If our executive reaches your doorstep, 
+                                please refuse to accept / handover the package.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">What do I do if I haven't received the refund of my returned shipment?</p>
+                        <div class="faq-answer">
+                            <p>As a delivery partner, we do not have any refund related information. We request you to contact the sender for further assistance.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">My shipment has been returned/cancelled. What should I do?</p>
+                        <div class="faq-answer">
+                            <p>Please contact the sender with whom the order was placed for further clarification.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">My shipment is out for delivery. When will I receive it?</p>
+                        <div class="faq-answer">
+                            <p>Your shipment can be delivered to you anytime between 10:00 am and 8:00 pm on the same day when it is marked as out for delivery.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">How can I get the delivery of my shipment if I missed it today?</p>
+                        <div class="faq-answer">
+                            <p>Do not worry if you missed your order.Company usually attempts to deliver the shipment on the following business day if you have missed a delivery.</p>
+                        </div>
+                    </div>
+    
+            <!-- Additional FAQ Sections for all categories here... -->
+        </div>
+    </div>
+    <div class="faq-section" data-category="report-issues">
+                <h2>Report Issues</h2>
+                <div class="faq">
+                    <!-- Sample FAQ Item -->
+                    <div class="faq-item">
+                        <p class="faq-question">I did not get my shipment but it is marked delivered. What do I do?</p>
+                        <div class="faq-answer">
+                            <p>Please check with your family members or neighbours in case 
+                                they have received the shipment on your behalf. 
+                                If they have not received the shipment, please raise a support ticket from here
+                                 and our support team will investigate the issue.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">What do I do on receiving a wrong/damaged/incorrect shipment?</p>
+                        <div class="faq-answer">
+                            <p>Rajveer is a logistics partner to the sender and hence cannot 
+                                guarantee product quality at their end. We assure you that all the shipments in our network will reach you untampered and in the same condition as was handed over to us by the sender. Please contact the sender or the marketplace to raise any product related issue.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">My Cash On Delivery (COD) link was disabled at the time of delivery. How do I pay?</p>
+                        <div class="faq-answer">
+                            <p>We regret the inconvenience caused to you due to this. In this case you can pay with cash/UPI/QR Code.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">What if my shipment is marked as lost?</p>
+                        <div class="faq-answer">
+                            <p>If a shipment is lost in our network, we immediately intimate the sender with the shipment status. Please get in touch with the sender, and you will be remitted accordingly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-section" data-category="fragile">
+                <h2>Fragile</h2>
+                <div class="faq">
+                    <!-- Sample FAQ Item -->
+                    <div class="faq-item">
+                        <p class="faq-question">How does Rajveer take care of fragile items?</p>
+                        <div class="faq-answer">
+                            <p>As the logistics partner, we request senders to provide such details beforehand based on which fragile items are segregated and handled with care.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-section" data-category="general">
+                <h2>General</h2>
+                <div class="faq">
+                    <!-- Sample FAQ Item -->
+                    <div class="faq-item">
+                        <p class="faq-question">How can I courier my personal parcel through Rajveer?</p>
+                        <div class="faq-answer">
+                            <p>You can send your personal parcels from here. 
+                                Place a request along with all your details and we'll pick it up from your doorstep. 
+                                You can refer to the FAQs on here to learn more.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-section" data-category="Partnerships">
+                <h2>Partnerships</h2>
+                <div class="faq">
+                    <!-- Sample FAQ Item -->
+                    <div class="faq-item">
+                        <p class="faq-question">How do I partner with Rajveer?</p>
+                        <div class="faq-answer">
+                            <p>You can partner with us as a transporter, fleet owner or a franchisee. Click here for more details.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-section" data-category="Careers">
+                <h2>Careers</h2>
+                <div class="faq">
+                    <!-- Sample FAQ Item -->
+                    <div class="faq-item">
+                        <p class="faq-question">I am looking for a job at Rajveer, where do I see the openings?</p>
+                        <div class="faq-answer">
+                            <p>Please visit careers page to view current job openings or view jobs under the careers section of our LinkedIn page.
+                                For delivery partner roles, download our partner app.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">Where can I send my resume for a relevant opening?</p>
+                        <div class="faq-answer">
+                            <p>Kindly send your resume to @gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <section class="support-section1">
+            <h2>Need support with your shipment?</h2>
+            <div class="query-box">
+              <h3>Please Login to Raise a Query</h3>
+              <input type="text" placeholder="Please enter your 10 digit mobile number">
+              <button>Login with OTP</button>
+            </div>
+        
+            <div class="app-download">
+              <h2>Have more questions?</h2>
+              <p>Download our app to raise a query</p>
+              <div class="app-buttons">
+                <a href="#">
+                  <img src="google.png" alt="Google Play Store" class="app-store">
+                </a>
+                <a href="#">
+                  <img src="apple.png" alt="App Store" class="app-store">
+                </a>
+              </div>
+            </div>
+          </section>    
+    </div>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo1.png" alt="Rajveer Logo">
+                <p></p>
+                <p></p>
+            </div>
+    
+            <div class="footer-line"></div>
+    
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Courier Shipping Bill</a></li>
+                        <li><a href="#">Customer Clearance</a></li>
+                        <li><a href="#">Import & Export</a></li>
+                        <li><a href="#">IEC Registration for New Sellers</a></li>
+                        <li><a href="#">FBA Services</a></li>
+                        <li><a href="#">Special Pricing For Bulk Shipments</a></li>
+                        <li><a href="#">Software Platform</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#">Multiple Shipping Partners</a></li>
+                        <li><a href="#">Track Shipments</a></li>
+                        <li><a href="#">Book & Dispatch</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Partners</h4>
+                    <ul>
+                        <li><a href="#">Franchise Opportunities</a></li>
+                        <li><a href="#">Delivery Partner</a></li>
+                        <li><a href="#">Fleet Owner</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Governance</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">ODR Portal</a></li>
+                        <li><a href="#">Press Release</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Get in Touch</h4>
+                    <ul>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Raise a query</a></li>
+                        <li><a href="#">Store Locator</a></li>
+                        <li><a href="#">Rate Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Policies</h4>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Fraud Disclaimer</a></li>
+                        <li><a href="#">ONDC Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="footer-line"></div>
+            <div class="disclaimer">
+                <h4>Information Security Policy</h4>
+                <p>Rajveer Logistics is committed to safeguarding the confidentiality, integrity, and availability of all physical and electronic information assets of the organization.</p>
+                <p>We ensure that the regulatory, operational, and contractual requirements are fulfilled.</p>
+            </div>
+
+            <div class="footer-policy-disclaimer">
+                
+                <div class="policy">
+                    <h4>Disclaimer</h4>
+                    <p>Operational metrics listed are as of 14 June, 2024</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><img src="https://img.icons8.com/?size=100&id=118467&format=png&color=ff7300" alt="Facebook"></a>
+                    <a href="#"><img src="https://img.icons8.com/?size=100&id=8824&format=png&color=ff7300" alt="X"></a>
+                    <a href="#"><img src="https://img.icons8.com/?size=100&id=8808&format=png&color=ff7300" alt="LinkedIn"></a>
+                    <a href="#"><img src="https://img.icons8.com/?size=100&id=37326&format=png&color=ff7300" alt="YouTube"></a>
+                    <a href="#"><img src="https://img.icons8.com/?size=100&id=TRVfmt9zm5vL&format=png&color=ff7300" alt="Instagram"></a>
+                </div>
+                
+            </div>
+            
+
+        </div>
+    </footer>
+
+    <div class="footer1">
+        <div class="footer-line1"></div>
+        <p>&copy; 2024 Rajveer Logistics. All rights reserved.</p>
+            <p style="display: flex; justify-content: center; align-items: center; gap: 10px; margin: 0; width: 100%; padding: 20px 0; text-align: center; background-color: rgb(29, 29, 29); color: white; font-size: 11px; letter-spacing: 1px;">
+                <a href="https://www.linkedin.com/in/khushi-kundwani" 
+                   target="_blank" 
+                   style="color: white; text-decoration: none; position: relative; font-size: 13px; overflow: hidden;" 
+                   onmouseover="this.children[0].style.height='calc(100% + 8px)';" 
+                   onmouseout="this.children[0].style.height='0';">
+                  &copy; Khushi Kundwani
+                  <span style="content: ''; background: white; mix-blend-mode: exclusion; width: calc(100% + 18px); height: 0; position: absolute; bottom: -4px; left: -10px; transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);"></span>
+                </a>
+                <a href="https://www.linkedin.com/in/mitanshi-jain555" 
+                   target="_blank" 
+                   style="color: white; text-decoration: none; position: relative; font-size: 13px; overflow: hidden;" 
+                   onmouseover="this.children[0].style.height='calc(100% + 8px)';" 
+                   onmouseout="this.children[0].style.height='0';">
+                  &copy; Mitanshi Jain
+                  <span style="content: ''; background: white; mix-blend-mode: exclusion; width: calc(100% + 18px); height: 0; position: absolute; bottom: -4px; left: -10px; transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);"></span>
+                </a>
+                <a href="https://www.linkedin.com/in/mohammad-shaban-aiotechbot" 
+                   target="_blank" 
+                   style="color: white; text-decoration: none; position: relative; font-size: 13px; overflow: hidden;" 
+                   onmouseover="this.children[0].style.height='calc(100% + 8px)';" 
+                   onmouseout="this.children[0].style.height='0';">
+                  &copy; Mohammad Shaban
+                  <span style="content: ''; background: white; mix-blend-mode: exclusion; width: calc(100% + 18px); height: 0; position: absolute; bottom: -4px; left: -10px; transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);"></span>
+                </a>
+              </p>
+    </div>
+    <script src="script20.js"></script>
+</body>
+</html>

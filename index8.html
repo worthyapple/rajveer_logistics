@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Courier</title>
+    <link rel="stylesheet" href="style8.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="hamburger" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div id="nav-sidebar" class="nav-sidebar">
+        <div class="back-button" id="back-button" style="display: none;" onclick="returnToMainMenu()">&#8592; Back</div>
+
+        <ul class="nav-menu" id="primary-menu">
+            <!-- Services Menu -->
+            <li class="nav-item">
+                <a href="#" onclick="showSubMenu('services-list')">Services <span class="arrow-icon">&#x25B6;</span></a>
+            </li>
+
+            <!-- Solutions Menu -->
+            <li class="nav-item">
+                <a href="#" onclick="showSubMenu('solutions-list')">Solutions <span class="arrow-icon">&#x25B6;</span></a>
+            </li>
+
+            <!-- Partner Menu -->
+            <li class="nav-item">
+                <a href="#" onclick="showSubMenu('partner-list')">Partner <span class="arrow-icon">&#x25B6;</span></a>
+            </li>
+
+            <!-- Company Menu -->
+            <li class="nav-item">
+                <a href="#" onclick="showSubMenu('company-list')">Company <span class="arrow-icon">&#x25B6;</span></a>
+            </li>
+
+            <li class="nav-item"><a href="index19.html">Track</a></li>
+            <li class="nav-item"><a href="index20.html">Support</a></li>
+
+            <!-- Ship Now Menu -->
+            <li class="nav-item">
+                <a href="#" class="ship-button" onclick="showSubMenu('ship-list')">Ship Now &nbsp;<span class="arrow-icon">&#x25B6;</span></a>
+            </li>
+        </ul>
+
+        <!-- Sub-menu for Services -->
+        <ul class="nav-menu sub-list" id="services-list" style="display: none;">
+            <li><a href="index1.html"><img src="https://img.icons8.com/?size=100&id=100617&format=png&color=ff9100" class="menu-img"> Express Parcel</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=U5JRqX4RSgfj&format=png&color=ff9100" class="menu-img"> Warehousing</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=90959&format=png&color=ff9100" class="menu-img"> Part Truckload</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=91020&format=png&color=ff9100" class="menu-img"> Full Truckload</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=120968&format=png&color=ff9100" class="menu-img"> Cross Border</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=101245&format=png&color=ff9100" class="menu-img"> Data Intelligence</a></li>
+        </ul>
+
+        <!-- Sub-menu for Solutions -->
+        <ul class="nav-menu sub-list" id="solutions-list" style="display: none;">
+            <li><a href="index7.html"><img src="https://img.icons8.com/?size=100&id=BqqNAAhxQuPC&format=png&color=ff9100" class="menu-img"> D2C Brands</a></li>
+            <li><a href="index8.html"><img src="https://img.icons8.com/?size=100&id=84072&format=png&color=ff9100" class="menu-img"> Personal Courier</a></li>
+            <li><a href="index9.html"><img src="https://img.icons8.com/?size=100&id=84003&format=png&color=ff9100" class="menu-img"> B2B Enterprises</a></li>
+            <li><a href="index10.html"><img src="https://img.icons8.com/?size=100&id=100805&format=png&color=ff9100" class="menu-img"> RTO Predictor</a></li>
+        </ul>
+
+        <!-- Sub-menu for Partner -->
+        <ul class="nav-menu sub-list" id="partner-list" style="display: none;">
+            <li><a href="index11.html"><img src="https://img.icons8.com/?size=100&id=8745&format=png&color=ff9100" class="menu-img"> Franchise Opportunities</a></li>
+            <li><a href="index12.html"><img src="https://img.icons8.com/?size=100&id=85115&format=png&color=ff9100" class="menu-img"> Delivery Partner</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=bW7vag883QQZ&format=png&color=ff9100" class="menu-img"> Fleet Owners</a></li>
+        </ul>
+
+        <!-- Sub-menu for Company -->
+        <ul class="nav-menu sub-list" id="company-list" style="display: none;">
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=83180&format=png&color=ff9100" class="menu-img"> About Us</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=101234&format=png&color=ff9100" class="menu-img"> Governance</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=91511&format=png&color=ff9100" class="menu-img"> Investor Relations</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=82755&format=png&color=ff9100" class="menu-img"> Press Relations</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=PhBcxv06P9yz&format=png&color=ff9100" class="menu-img"> Careers</a></li>
+        </ul>
+
+        <!-- Sub-menu for Ship Now -->
+        <ul class="nav-menu sub-list" id="ship-list">
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=83142&format=png&color=ff9100" class="menu-img"> Personal Courier</a></li>
+            <li><a href="#"><img src="https://img.icons8.com/?size=100&id=120940&format=png&color=ff9100" class="menu-img"> Business Shipments</a></li>
+        </ul>
+    </div>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="RJ Logistics Logo" class="logo-img"></a>
+            </div>
+
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="#">Services</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="index1.html">
+                            <img src="https://img.icons8.com/?size=100&id=100617&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Express Parcel
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=U5JRqX4RSgfj&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Warehousing
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=90959&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Part Truckload
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=91020&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Full Truckload
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=120968&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Cross Border
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=101245&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Data Intelligence
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Solutions</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="index7.html">
+                            <img src="https://img.icons8.com/?size=100&id=BqqNAAhxQuPC&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            D2C Brands
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index8.html">
+                            <img src="https://img.icons8.com/?size=100&id=84072&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Personal Courier
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index9.html">
+                            <img src="https://img.icons8.com/?size=100&id=84003&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            B2B Enterprises
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index10.html">
+                            <img src="https://img.icons8.com/?size=100&id=100805&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            RTO Predictor
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Partner</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="index11.html">
+                            <img src="https://img.icons8.com/?size=100&id=8745&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Franchise Opportunities
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index12.html">
+                            <img src="https://img.icons8.com/?size=100&id=85115&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Delivery Partner
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=bW7vag883QQZ&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Fleet Owners
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Company</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=83180&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=101234&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Governance
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=91511&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Investor Relations
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=82755&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Press Relations
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <img src="https://img.icons8.com/?size=100&id=PhBcxv06P9yz&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                            Careers
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="index19.html">Track</a></li>
+                <li class="nav-item"><a href="index20.html">Support</a></li>
+            </ul>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Ship Now &#x25BC;</button>
+                <div class="dropdown-content">
+                    <a href="#">
+                        <img src="https://img.icons8.com/?size=100&id=83142&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                        Personal Courier
+                    </a>
+                    <a href="#">
+                        <img src="https://img.icons8.com/?size=100&id=120940&format=png&color=ff9100" alt="Express Parcel Icon" class="menu-icon">
+                        Business Shipments
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <div class="body">
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <h2>Get your shipment picked up from your <span style="color: rgb(255, 115, 0);"><br><h1>Doorstep</h1></span></h2>
+            <p>Send your parcel from the comfort of your home or office</p>
+            <div class="app-buttons">
+                <img src="apple.png" alt="Download on the App Store">
+                <img src="google.png" alt="Get it on Google Play">
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <h3>Ship personal courier</h3>
+            <div class="toggle-buttons">
+                <div id="domestic" class="toggle-button active" onclick="toggleShipping('domestic')">Domestic</div>
+                <div id="international" class="toggle-button inactive" onclick="toggleShipping('international')">International</div>
+            </div>
+            <input type="text" class="form-input" placeholder="Enter pickup pin code">
+            <input type="text" class="form-input" placeholder="Enter delivery pin code">
+            <button class="submit-button">Ship a parcel now</button>
+            <div class="signup-link">
+                <a href="signup.html">Sign up to ship as a business here</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="body1">
+<div class="how-it-works-container">
+    <h2>How it <span>works</span></h2>
+    <div class="underline"></div>
+    <div class="steps">
+        <!-- Step 1 -->
+        <div class="step">
+            <img src="1.png" alt="Schedule Icon">
+            <h3><span>Schedule</span> a free pickup</h3>
+            <p>Get doorstep pickup for parcels from your location. Book couriers for yourself or your loved ones online from our website or app.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="step">
+            <img src="2.png" alt="Arrival Icon">
+            <h3>We arrive at your <span>doorstep</span></h3>
+            <p>Our partners reach your location within 24 hours of placing the order.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="step">
+            <img src="3.png" alt="Delivery Icon">
+            <h3>Sit back and <span>relax</span></h3>
+            <p>Your order will be delivered to the chosen destination. Track it from our website or app.</p>
+        </div>
+    </div>
+</div>
+</div>
+<div class="body3">
+<div class="convenience-container">
+    <div class="convenience-header">
+        <h2>Get unmatched <span>convenience</span> with Rajveer Logistics</h2>
+        <div class="underline"></div>
+    </div>
+    <div class="features">
+        <!-- Feature 1 -->
+        <div class="feature-box">
+            <img src="https://img.icons8.com/?size=100&id=8212&format=png&color=FD7E14" alt="Same-day pick up Icon">
+            <div>
+                <h3><span>Same-day pick up</span></h3>
+                <p>Get your order picked up from your doorstep. Order before 2 PM for same day pick up.</p>
+            </div>
+        </div>
+        <!-- Feature 2 -->
+        <div class="feature-box">
+            <img src="https://img.icons8.com/?size=100&id=120968&format=png&color=ff9100" alt="No shipping label Icon">
+            <div>
+                <h3><span>No shipping label needed</span></h3>
+                <p>Avoid the hassle of shipping labels. Book instantly and save time!</p>
+            </div>
+        </div>
+        <!-- Feature 3 -->
+        <div class="feature-box">
+            <img src="https://img.icons8.com/?size=100&id=8382&format=png&color=FD7E14" alt="Secure parcel Icon">
+            <div>
+                <h3><span>Secure your parcel</span></h3>
+                <p>Delivery Protect saves you from loss in case of damage.</p>
+            </div>
+        </div>
+        <!-- Feature 4 -->
+        <div class="feature-box">
+            <img src="https://img.icons8.com/?size=100&id=7880&format=png&color=FD7E14" alt="Pan-India shipping Icon">
+            <div>
+                <h3><span>Reliable, Pan-India shipping</span></h3>
+                <p>Quick pick-up and fast delivery across 18,600+ pin codes.</p>
+            </div>
+        </div>
+    </div>
+    <div class="button-container">
+        <a href="signup.html">Ship now →</a>
+    </div>
+</div>
+</div>
+
+<div class="body4">
+<div class="slider-container">
+    <div class="slider-image">
+        <img id="sliderImage" src="image1.jpg" alt="Delivery Image">
+        <div class="slider-arrows">
+            <button onclick="prevSlide()">&#8592;</button>
+            <button onclick="nextSlide()">&#8594;</button>
+        </div>
+    </div> 
+    <div class="slider-text">
+        <h3>What our <span>users say</span></h3>
+        
+        <div class="underline"></div>
+        <p id="testimonialText">My overall experience with Rajveer has been good. I had to send a package to my mother in Punjab, and the order was delivered within the allotted time. Particularly for long-distance and important packages, I need not look further than Rajveer.</p>
+        <p class="author" id="author">Khushi Kundwani,</p>
+        <p class="location" id="location">Mumbai, Maharashtra</p>
+    </div>
+</div>
+</div>
+
+<div class="banner">
+    <div>
+        <h2>Looking to <strong>ship as a business instead?</strong></h2>
+        <div class="button-container">
+            <a href="signup.html" class="button">
+                Sign Up Here <span class="arrow">→</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    
+        <footer>
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="logo1.png" alt="Rajveer Logo">
+                    <p></p>
+                    <p></p>
+                </div>
+        
+                <div class="footer-line"></div>
+        
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">Courier Shipping Bill</a></li>
+                            <li><a href="#">Customer Clearance</a></li>
+                            <li><a href="#">Import & Export</a></li>
+                            <li><a href="#">IEC Registration for New Sellers</a></li>
+                            <li><a href="#">FBA Services</a></li>
+                            <li><a href="#">Special Pricing For Bulk Shipments</a></li>
+                            <li><a href="#">Software Platform</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Solutions</h4>
+                        <ul>
+                            <li><a href="#">Multiple Shipping Partners</a></li>
+                            <li><a href="#">Track Shipments</a></li>
+                            <li><a href="#">Book & Dispatch</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Partners</h4>
+                        <ul>
+                            <li><a href="#">Franchise Opportunities</a></li>
+                            <li><a href="#">Delivery Partner</a></li>
+                            <li><a href="#">Fleet Owner</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Governance</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                            <li><a href="#">ODR Portal</a></li>
+                            <li><a href="#">Press Release</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Get in Touch</h4>
+                        <ul>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Raise a query</a></li>
+                            <li><a href="#">Store Locator</a></li>
+                            <li><a href="#">Rate Calculator</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Policies</h4>
+                        <ul>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">Fraud Disclaimer</a></li>
+                            <li><a href="#">ONDC Disclaimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div class="footer-line"></div>
+                <div class="disclaimer">
+                    <h4>Information Security Policy</h4>
+                    <p>Rajveer Logistics is committed to safeguarding the confidentiality, integrity, and availability of all physical and electronic information assets of the organization.</p>
+                    <p>We ensure that the regulatory, operational, and contractual requirements are fulfilled.</p>
+                </div>
+    
+                <div class="footer-policy-disclaimer">
+                    
+                    <div class="policy">
+                        <h4>Disclaimer</h4>
+                        <p>Operational metrics listed are as of 14 June, 2024</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><img src="https://img.icons8.com/?size=100&id=118467&format=png&color=ff7300" alt="Facebook"></a>
+                        <a href="#"><img src="https://img.icons8.com/?size=100&id=8824&format=png&color=ff7300" alt="X"></a>
+                        <a href="#"><img src="https://img.icons8.com/?size=100&id=8808&format=png&color=ff7300" alt="LinkedIn"></a>
+                        <a href="#"><img src="https://img.icons8.com/?size=100&id=37326&format=png&color=ff7300" alt="YouTube"></a>
+                        <a href="#"><img src="https://img.icons8.com/?size=100&id=TRVfmt9zm5vL&format=png&color=ff7300" alt="Instagram"></a>
+                    </div>
+                    
+                </div>
+                
+    
+            </div>
+        </footer>
+        <div class="footer1">
+            <div class="footer-line1"></div>
+            <p>&copy; 2024 Rajveer Logistics. All rights reserved.</p>
+            <p style="display: flex; justify-content: center; align-items: center; gap: 10px; margin: 0; width: 100%; padding: 20px 0; text-align: center; background-color: rgb(29, 29, 29); color: white; font-size: 11px; letter-spacing: 1px;">
+                <a href="https://www.linkedin.com/in/khushi-kundwani" 
+                   target="_blank" 
+                   style="color: white; text-decoration: none; position: relative; font-size: 13px; overflow: hidden;" 
+                   onmouseover="this.children[0].style.height='calc(100% + 8px)';" 
+                   onmouseout="this.children[0].style.height='0';">
+                  &copy; Khushi Kundwani
+                  <span style="content: ''; background: white; mix-blend-mode: exclusion; width: calc(100% + 18px); height: 0; position: absolute; bottom: -4px; left: -10px; transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);"></span>
+                </a>
+                <a href="https://www.linkedin.com/in/mitanshi-jain555" 
+                   target="_blank" 
+                   style="color: white; text-decoration: none; position: relative; font-size: 13px; overflow: hidden;" 
+                   onmouseover="this.children[0].style.height='calc(100% + 8px)';" 
+                   onmouseout="this.children[0].style.height='0';">
+                  &copy; Mitanshi Jain
+                  <span style="content: ''; background: white; mix-blend-mode: exclusion; width: calc(100% + 18px); height: 0; position: absolute; bottom: -4px; left: -10px; transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);"></span>
+                </a>
+                <a href="https://www.linkedin.com/in/mohammad-shaban-aiotechbot" 
+                   target="_blank" 
+                   style="color: white; text-decoration: none; position: relative; font-size: 13px; overflow: hidden;" 
+                   onmouseover="this.children[0].style.height='calc(100% + 8px)';" 
+                   onmouseout="this.children[0].style.height='0';">
+                  &copy; Mohammad Shaban
+                  <span style="content: ''; background: white; mix-blend-mode: exclusion; width: calc(100% + 18px); height: 0; position: absolute; bottom: -4px; left: -10px; transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);"></span>
+                </a>
+              </p>
+        </div>
+    <script src="script8.js"></script>
+</body>
+</html>
